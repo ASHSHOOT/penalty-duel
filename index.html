@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8" />
+<title>Duel de pénalty</title>
+<style>
+  html,body{margin:0;height:100%;background:#0b1020;color:#eaeaea;font:16px/1.4 system-ui}
+  #wrap{display:grid;place-items:center;height:100%}
+  button{padding:10px 16px;border:0;border-radius:8px;background:#1f2a44;color:#eaeaea;cursor:pointer}
+  canvas{display:block;width:90vw;height:60vh;border:1px solid #1f2a44;border-radius:8px}
+</style>
+<div id="wrap">
+  <div>
+    <h1>Duel de pénalty (démo statique)</h1>
+    <canvas id="c"></canvas><br>
+    <button id="shoot">Tirer</button>
+    <span id="out">Prêt</span>
+  </div>
+</div>
+<script>
+const C=document.getElementById('c'),ctx=C.getContext('2d');C.width=900;C.height=600;
+function draw(){ctx.clearRect(0,0,900,600);ctx.strokeStyle='#6fb1ff';ctx.strokeRect(300,120,300,200)}
+draw();
+document.getElementById('shoot').onclick=()=>{document.getElementById('out').textContent='But ! (démo)'}
+</script>
+</html>
